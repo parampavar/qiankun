@@ -18,6 +18,13 @@ export default function Framework(props) {
     <>
       <header className={style.header}>
         <nav>
+          <button
+            onClick={() => {
+              setInterval(() => {
+                console.log('this is log at interval')
+              }, 300)
+            }}
+          >start interval, 300ms</button>
           <ol>
             <li><a onClick={() => goto('react app', '/react')}>react16 + antd3</a></li>
             <li><a onClick={() => goto('react15 app', '/15react15')}>react15 + antd2</a></li>
